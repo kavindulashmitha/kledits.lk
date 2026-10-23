@@ -1,0 +1,9 @@
+{
+  "name": "kledits-official-web",
+  "version": "1.0.0",
+  "description": "KL Edits - Official Agency Website and Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

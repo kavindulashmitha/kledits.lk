@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KL Edits - Your Professional Design Partner</title>
+  <meta name="description" content="KL Edits - Professional CV Design, Graphic Design, Video Editing, and Web Development Services.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Google Fonts: Inter, Poppins, Plus Jakarta Sans, Noto Sans Sinhala -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Sinhala:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Poppins', 'Inter', 'sans-serif'],
+            sinhala: ['"Noto Sans Sinhala"', 'Poppins', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy: '#060d1d',          /* Deep Executive Navy */
+              navyLight: '#0d1933',     /* Elevated Navy Canvas */
+              navyBorder: '#1c2d54',    /* Subtle Blue Border */
+              navyGlow: '#1e3a8a',      /* Accent Blue Glow */
+              gold: '#eab308',          /* Deep Warm Yellow / Gold */
+              goldHover: '#ca8a04',     /* Darker Gold Accent */
+              goldLight: '#fef08a',     /* Soft Pale Gold */
+              slateText: '#94a3b8',
+              slateLight: '#f1f5f9'
+            }
+          },
+          animation: {
+            'float': 'float 3.5s ease-in-out infinite',
+            'pulse-subtle': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-6px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f8fafc;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+    
+    /* Dark Theme Hero & Footer Glassmorphic Styles */
+    .navy-glass-nav {
+      background: rgba(6, 13, 29, 0.92);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(234, 179, 8, 0.2);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+    }
+    
+    /* Light Modern Content Cards */
+    .light-card {
+      background: #ffffff;
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.02);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .light-card:hover {
+      border-color: rgba(234, 179, 8, 0.7);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 35px -10px rgba(234, 179, 8, 0.15), 0 10px 20px -5px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Ambient Hero Glow */
+    .glow-navy {
+      background: radial-gradient(circle at 50% 0%, rgba(30, 58, 138, 0.4) 0%, rgba(6, 13, 29, 0) 70%);
+      pointer-events: none;
+    }
+
+    /* View transition effect */
+    .view-section {
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    /* Slide Image transitions */
+    .slide-bg {
+      transition: opacity 1.2s ease-in-out, transform 6s ease-out;
+    }
+  </style>
+</head>
+
+<body class="bg-[#f8fafc] text-slate-800 font-sans min-h-screen flex flex-col relative selection:bg-brand-gold selection:text-brand-navy antialiased overflow-x-hidden">
+
+  <!-- ============================================================== -->
+  <!-- 1. STICKY NAVY & GOLD GLASSMORPHIC NAVBAR                      -->
+  <!-- ============================================================== -->
+  <header class="sticky top-0 z-50 navy-glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#home" onclick="switchView('home', event)" class="flex items-center gap-3.5 group cursor-pointer">
+          <img src="/public/images/logo.jpg" alt="KL Edits Logo" class="w-12 h-12 rounded-xl object-contain bg-black shadow-lg border border-brand-gold/30 group-hover:scale-105 group-hover:border-brand-gold transition-all duration-300">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xl font-extrabold tracking-tight text-white group-hover:text-brand-gold transition-colors">KL Edits</span>
+              <span class="inline-block w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+            </div>
+            <p class="text-[10px] uppercase tracking-widest text-slate-400 font-medium">Your Professional Design Partner</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <nav class="hidden md:flex items-center gap-1.5 lg:gap-2">
+          <button onclick="switchView('home')" data-nav="home" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all text-brand-navy bg-brand-gold shadow-md shadow-brand-gold/20">
+            Home
+          </button>
+          <button onclick="switchView('cv')" data-nav="cv" class="nav-btn px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-all">
+            CV Design
+          </button>
+          <button onclick="switchView('graphic')" data-nav="graphic" class="nav-btn px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-all">
+            Graphic Design
+          </button>
+          <button onclick="switchView('video')" data-nav="video" class="nav-btn px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-all">
+            Video Editing
+          </button>
+          <button onclick="switchView('web')" data-nav="web" class="nav-btn px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-all">
+            Web Development
+          </button>
+          <button onclick="switchView('contact')" data-nav="contact" class="nav-btn px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-all">
+            Contact Us
+          </button>
+        </nav>
+
+        <!-- CTA & WhatsApp button on Navbar -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="https://wa.me/94764988206?text=Hello%20KL%20Edits%2C%20I%20am%20interested%20in%20your%20services." target="_blank" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold text-xs tracking-wide transition-all hover:scale-[1.02] shadow-lg shadow-emerald-500/20">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>076 498 8206</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex md:hidden items-center">
+          <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="p-2.5 rounded-xl bg-white/5 text-slate-300 hover:bg-white/10 transition-colors">
+            <i class="fa-solid fa-bars text-xl" id="mobileMenuIcon"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-brand-navyBorder bg-brand-navy/95 backdrop-blur-2xl px-5 pt-3 pb-6 transition-all duration-300">
+      <div class="flex flex-col space-y-2 mt-2">
+        <button onclick="switchView('home')" class="mobile-nav-btn text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-white/10 flex items-center justify-between">
+          <span>Home</span>
+          <i class="fa-solid fa-chevron-right text-xs text-brand-gold"></i>
+        </button>
+        <button onclick="switchView('cv')" class="mobile-nav-btn text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-white/10 flex items-center justify-between">
+          <span>CV Design</span>
+          <i class="fa-solid fa-chevron-right text-xs text-brand-gold"></i>
+        </button>
+        <button onclick="switchView('graphic')" class="mobile-nav-btn text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-white/10 flex items-center justify-between">
+          <span>Graphic Design</span>
+          <i class="fa-solid fa-chevron-right text-xs text-brand-gold"></i>
+        </button>
+        <button onclick="switchView('video')" class="mobile-nav-btn text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-white/10 flex items-center justify-between">
+          <span>Video Editing</span>
+          <i class="fa-solid fa-chevron-right text-xs text-brand-gold"></i>
+        </button>
+        <button onclick="switchView('web')" class="mobile-nav-btn text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-white/10 flex items-center justify-between">
+          <span>Web Development</span>
+          <i class="fa-solid fa-chevron-right text-xs text-brand-gold"></i>
+        </button>
+        <button onclick="switchView('contact')" class="mobile-nav-btn text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-white/10 flex items-center justify-between">
+          <span>Contact Us</span>
+          <i class="fa-solid fa-chevron-right text-xs text-brand-gold"></i>
+        </button>
+        <div class="pt-3">
+          <a href="https://wa.me/94764988206?text=Hello%20KL%20Edits%2C%20I%20am%20interested%20in%20your%20services." target="_blank" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold text-sm">
+            <i class="fa-brands fa-whatsapp text-lg"></i> Direct WhatsApp (076 498 8206)
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main View Container -->
+  <main class="flex-grow z-10 relative">
+
+    <!-- ============================================================== -->
+    <!-- VIEW A: HOME (LANDING PAGE)                                    -->
+    <!-- ============================================================== -->
+    <div id="view-home" class="view-section">
+      
+      <!-- 1. Executive Modern Split Hero Section (Inspired by ictkusal.com Authority & Dual Showcase) -->
+      <section class="relative overflow-hidden py-10 lg:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#030712] via-[#08132e] to-[#040817] border-b border-brand-navyBorder/80">
+        
+        <!-- Ambient Luxury Background Glows -->
+        <div class="absolute -top-24 left-1/4 w-[500px] h-[300px] bg-blue-600/20 blur-[120px] pointer-events-none"></div>
+        <div class="absolute top-1/2 -right-20 w-[450px] h-[350px] bg-amber-500/15 blur-[130px] pointer-events-none"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none opacity-40"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+            
+            <!-- Left Column: Authority Headline, Sinhala Subtitle, Trust Pillars, and CTAs -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+              
+              <!-- Floating Trust Badge -->
+              <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-amber-400/30 bg-[#0c1a3d]/80 backdrop-blur-xl text-xs font-bold text-amber-300 shadow-lg">
+                <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <i class="fa-solid fa-award text-amber-400"></i>
+                <span>Sri Lanka's Premier Creative & Web Design Agency</span>
+              </div>
+
+              <!-- Main Punchy Title with Gold Accent -->
+              <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black tracking-tight text-white leading-[1.15]">
+                Elevate Your Brand & Career With <br class="hidden sm:inline">
+                <span class="bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-500 bg-clip-text text-transparent drop-shadow-sm">
+                  KL Edits
+                </span>
+              </h1>
+
+              <!-- Sinhala & English Combined Authority Tagline -->
+              <div class="space-y-2">
+                <p class="text-base sm:text-lg text-amber-100/90 font-medium font-sinhala leading-relaxed">
+                  ඔබේ වෘත්තීය ජීවිතයට හා ව්‍යාපාරයට ආකර්ෂණීය ඩිජිටල් නිර්මාණ, නවීන වෙබ් අඩවි සහ CV සේවාවන්.
+                </p>
+                <p class="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
+                  High-converting ATS resumes from <span class="text-amber-400 font-bold">Rs. 600/=</span>, custom marketing graphic banners, cinematic video editing, and lightning-fast corporate websites.
+                </p>
+              </div>
+
+              <!-- Trust Pillars / Key Highlights (ictkusal style feature pills) -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-1 max-w-xl mx-auto lg:mx-0 text-left">
+                <div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
+                  <i class="fa-solid fa-file-shield text-amber-400 text-sm"></i>
+                  <span class="text-xs font-bold text-slate-200">ATS CV Formats</span>
+                </div>
+                <div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
+                  <i class="fa-solid fa-bolt text-amber-400 text-sm"></i>
+                  <span class="text-xs font-bold text-slate-200">24h Fast Delivery</span>
+                </div>
+                <div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md col-span-2 sm:col-span-1">
+                  <i class="fa-solid fa-globe text-emerald-400 text-sm"></i>
+                  <span class="text-xs font-bold text-slate-200">Modern Web Apps</span>
+                </div>
+              </div>
+
+              <!-- Action CTAs -->
+              <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
+                <a href="https://wa.me/94764988206?text=Hello%20KL%20Edits%2C%20I%20would%20like%20to%20order%20a%20service." target="_blank" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-600 hover:from-amber-300 hover:to-yellow-500 text-slate-950 font-black text-xs sm:text-sm shadow-xl shadow-amber-500/25 hover:shadow-amber-500/40 hover:scale-[1.03] transition-all duration-300 flex items-center gap-2.5">
+                  <i class="fa-brands fa-whatsapp text-base"></i>
+                  <span>Order on WhatsApp (076 498 8206)</span>
+                </a>
+
+                <button onclick="scrollToServices()" class="px-6 py-3.5 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 text-white font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 hover:border-amber-400/60 shadow-lg">
+                  <span>Explore Portfolio</span>
+                  <i class="fa-solid fa-arrow-down text-xs text-amber-400"></i>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- Right Column: Interactive Showcase Card / Slider with Glow Frame (Inspired by kl-edits.vercel.app) -->
+            <div class="lg:col-span-5 flex flex-col items-center">
+              
+              <div class="relative w-full max-w-lg">
+                <!-- Golden Ambient Backglow Effect around showcase (exact match to screenshot) -->
+                <div class="absolute -inset-2 bg-gradient-to-r from-amber-500/35 via-yellow-500/25 to-amber-600/35 rounded-[32px] blur-xl opacity-80 pointer-events-none"></div>
+                
+                <!-- Main Device Mockup / Showcase Frame -->
+                <div class="relative rounded-[26px] bg-[#07112a] border border-[#1d2d5a] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.85)] overflow-hidden p-4 sm:p-5">
+                  
+                  <!-- Top Bar: Traffic light dots (Red, Yellow, Green) + Centered Golden Capsule Pill + Green Live Preview dot -->
+                  <div class="flex items-center justify-between pb-3.5 px-1">
+                    <!-- Left: Traffic Light Window Buttons -->
+                    <div class="flex items-center gap-2">
+                      <span class="w-3 h-3 rounded-full bg-[#f87171]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#fbbf24]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#34d399]"></span>
+                    </div>
+
+                    <!-- Center: Glowing Golden Category Capsule Badge -->
+                    <div class="px-4 py-1 rounded-full border border-amber-400/80 bg-amber-400/10 text-amber-300 font-extrabold text-[11px] sm:text-xs tracking-wider uppercase shadow-[0_0_15px_rgba(251,191,36,0.25)]">
+                      <span id="heroCategoryLabel">CV & RESUME DESIGN</span>
+                    </div>
+
+                    <!-- Right: Live Preview Pulse -->
+                    <div class="flex items-center gap-1.5 text-[11px] font-medium text-slate-300 font-mono">
+                      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                      <span>Live Preview</span>
+                    </div>
+                  </div>
+
+                  <!-- Inner Display Canvas: Dark rounded container holding the centered showcase slide -->
+                  <div class="relative w-full rounded-2xl overflow-hidden bg-[#030816] border border-[#162244] aspect-square sm:aspect-[4/3] flex items-center justify-center p-2 sm:p-3 mt-1 group">
+                    <div id="heroSliderContainer" class="absolute inset-0 flex items-center justify-center">
+                      <!-- Slides injected dynamically with contain/fit -->
+                    </div>
+
+                    <!-- Subtle Navigation Hover Controls -->
+                    <button onclick="prevHeroSlide()" aria-label="Previous Slide" class="absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/80 hover:bg-black text-amber-400 border border-amber-400/30 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 z-20 shadow-lg">
+                      <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                    <button onclick="nextHeroSlide()" aria-label="Next Slide" class="absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/80 hover:bg-black text-amber-400 border border-amber-400/30 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 z-20 shadow-lg">
+                      <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                  </div>
+
+                  <!-- Bottom Slider Navigation Controls (Exact match to screenshot) -->
+                  <div class="flex items-center justify-between pt-4 px-1">
+                    <!-- Left: Quick Category Selectors (CV • Graphics • Web) -->
+                    <div class="flex items-center gap-2.5 text-xs font-bold text-slate-300">
+                      <button id="heroTab-0" onclick="setHeroSlide(0)" class="hover:text-amber-400 transition-colors">CV</button>
+                      <span class="text-slate-600 text-[10px]">•</span>
+                      <button id="heroTab-1" onclick="setHeroSlide(1)" class="hover:text-amber-400 transition-colors">Graphics</button>
+                      <span class="text-slate-600 text-[10px]">•</span>
+                      <button id="heroTab-2" onclick="setHeroSlide(2)" class="hover:text-amber-400 transition-colors">Web</button>
+                    </div>
+
+                    <!-- Right: Pill / Dot Indicators (Active = Golden Horizontal Capsule, Inactive = Muted Gray Round Dots) -->
+                    <div id="sliderIndicators" class="flex items-center gap-1.5">
+                      <!-- Injected dynamically -->
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Services Preview Showcase (4 distinct Categories) -->
+      <section id="servicesPreviewSection" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+        
+        <!-- Section Intro -->
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <span class="text-xs uppercase tracking-widest font-black text-amber-600 bg-amber-50 px-3.5 py-1 rounded-full border border-amber-200">Portfolio & Solutions</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Our Core Services & Featured Work</h2>
+          <p class="text-slate-600 text-sm sm:text-base">Meticulously crafted designs and web platforms. Browse our featured works below.</p>
+        </div>
+
+        <!-- Category 1: CV Design Preview -->
+        <div class="space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200 pb-4">
+            <div>
+              <span class="text-xs font-bold text-amber-600 uppercase tracking-widest">Service 01</span>
+              <h3 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+                <i class="fa-solid fa-file-invoice text-amber-600"></i> Professional CV Design
+              </h3>
+              <p class="text-slate-500 text-xs sm:text-sm font-sinhala mt-1">ඔයාගෙ Professional ජීවිතයට ගැළපෙන ආකර්ෂණීය CV මෝස්තර</p>
+            </div>
+            <button onclick="switchView('cv')" class="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-amber-600 transition-colors group">
+              <span>View All 12 Templates & Order</span>
+              <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+          
+          <div id="homeCvGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            <!-- 5 Featured CV Cards injected by JS -->
+          </div>
+        </div>
+
+        <!-- Category 2: Graphic Design Preview -->
+        <div class="space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200 pb-4">
+            <div>
+              <span class="text-xs font-bold text-amber-600 uppercase tracking-widest">Service 02</span>
+              <h3 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+                <i class="fa-solid fa-palette text-amber-600"></i> Creative Graphic Design
+              </h3>
+              <p class="text-slate-500 text-xs sm:text-sm mt-1">X-Banners, File Covers, Handbills, Tute Covers & Class Posters</p>
+            </div>
+            <button onclick="switchView('graphic')" class="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-amber-600 transition-colors group">
+              <span>View All Graphics & Order</span>
+              <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+          
+          <div id="homeGraphicGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            <!-- 5 Featured Graphic Cards injected by JS -->
+          </div>
+        </div>
+
+        <!-- Category 3: Video Editing Preview -->
+        <div class="space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200 pb-4">
+            <div>
+              <span class="text-xs font-bold text-amber-600 uppercase tracking-widest">Service 03</span>
+              <h3 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+                <i class="fa-solid fa-video text-amber-600"></i> Video Editing & Motion Graphics
+              </h3>
+              <p class="text-slate-500 text-xs sm:text-sm mt-1">High-retention video editing services (Reels, TikTok, YouTube Shorts, Commercials)</p>
+            </div>
+            <button onclick="switchView('video')" class="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-amber-600 transition-colors group">
+              <span>View Video Editing Details</span>
+              <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+          
+          <div id="homeVideoGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- Video Editing placeholders / coming soon injected by JS -->
+          </div>
+        </div>
+
+        <!-- Category 4: Web Development Preview -->
+        <div class="space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200 pb-4">
+            <div>
+              <span class="text-xs font-bold text-amber-600 uppercase tracking-widest">Service 04</span>
+              <h3 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+                <i class="fa-solid fa-code text-amber-600"></i> Modern Web Development
+              </h3>
+              <p class="text-slate-500 text-xs sm:text-sm mt-1">Responsive resort portals, boutique hotels, dynamic booking & educational forms</p>
+            </div>
+            <button onclick="switchView('web')" class="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-amber-600 transition-colors group">
+              <span>View All 4 Live Web Projects</span>
+              <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+          
+          <div id="homeWebGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- 4 Featured Real Web Cards injected by JS -->
+          </div>
+        </div>
+
+      </section>
+
+      <!-- 3. Animated Statistics Counter Section (Light Clean Section) -->
+      <section id="statsSection" class="py-16 bg-white border-y border-slate-200 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            
+            <div class="p-6 rounded-2xl light-card relative group">
+              <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl group-hover:bg-slate-900 group-hover:text-amber-400 transition-all">
+                <i class="fa-solid fa-check-double"></i>
+              </div>
+              <div class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+                <span class="stat-counter" data-target="1000">0</span>+
+              </div>
+              <p class="text-slate-600 text-xs sm:text-sm font-semibold mt-2">Designs Completed</p>
+            </div>
+
+            <div class="p-6 rounded-2xl light-card relative group">
+              <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl group-hover:bg-slate-900 group-hover:text-amber-400 transition-all">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <div class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+                <span class="stat-counter" data-target="500">0</span>+
+              </div>
+              <p class="text-slate-600 text-xs sm:text-sm font-semibold mt-2">Happy Clients</p>
+            </div>
+
+            <div class="p-6 rounded-2xl light-card relative group">
+              <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl group-hover:bg-slate-900 group-hover:text-amber-400 transition-all">
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+                <span class="stat-counter" data-target="100">0</span>%
+              </div>
+              <p class="text-slate-600 text-xs sm:text-sm font-semibold mt-2">Satisfaction Rate</p>
+            </div>
+
+            <div class="p-6 rounded-2xl light-card relative group">
+              <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl group-hover:bg-slate-900 group-hover:text-amber-400 transition-all">
+                <i class="fa-solid fa-business-time"></i>
+              </div>
+              <div class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+                <span class="stat-counter" data-target="2">0</span>+
+              </div>
+              <p class="text-slate-600 text-xs sm:text-sm font-semibold mt-2">Years Experience</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. General Client Feedback -->
+      <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+          <span class="text-xs uppercase tracking-widest font-extrabold text-amber-600 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">Real Client Work</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">What Our Clients Say & Received</h2>
+          <p class="text-slate-600 text-sm">Genuine design deliveries for verified customers. Click any card to preview full size.</p>
+        </div>
+
+        <div id="generalFeedbackGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+          <!-- Populated from siteData.generalFeedback -->
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- VIEW B: CV DESIGN SERVICE (12 Templates & Dedicated Feedback)   -->
+    <!-- ============================================================== -->
+    <div id="view-cv" class="view-section hidden py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        
+        <!-- Service Header with Sinhala Unicode Support -->
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber-200 bg-amber-50 text-amber-700 text-xs font-bold shadow-sm">
+            <i class="fa-solid fa-briefcase"></i> Career Catalyst
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-black font-sinhala text-slate-900 leading-tight">
+            "ඔයාගෙ Professional ජීවිතයට Professional CV එකක්"
+          </h1>
+          <p class="text-lg text-slate-700 font-semibold">
+            ATS-Friendly, Modern, and High-Impact CV / Resume Designs Crafted for Global & Local Opportunities.
+          </p>
+          <p class="text-sm text-slate-500">
+            Pick your favorite template from our curated collection below for just <span class="text-slate-900 font-black underline">Rs. 600/=</span>. Click "Order Now" to customize immediately via WhatsApp.
+          </p>
+        </div>
+
+        <!-- 12 Editable CV Templates Grid -->
+        <div class="space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+            <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+              <i class="fa-solid fa-shapes text-amber-600"></i> Choose from 12 Premium CV Templates
+            </h2>
+            <span class="text-xs font-bold px-3 py-1 rounded-lg bg-slate-900 text-white">Standard Price: Rs. 600/=</span>
+          </div>
+
+          <div id="cvTemplatesGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- 12 CV template cards will be rendered here dynamically -->
+          </div>
+        </div>
+
+        <!-- Dedicated CV Customer Feedback Section -->
+        <div class="pt-10 border-t border-slate-200 space-y-8">
+          <div class="text-center max-w-2xl mx-auto space-y-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-600">CV Client Testimonials</span>
+            <h3 class="text-2xl sm:text-3xl font-bold text-slate-900">Client Feedback on our CV Designs</h3>
+            <p class="text-xs sm:text-sm text-slate-500">Read what job seekers and professionals experienced with KL Edits CV service.</p>
+          </div>
+
+          <div id="cvFeedbackGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Populated from siteData.cvService.feedbacks -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- VIEW C: GRAPHIC DESIGN SERVICE                                 -->
+    <!-- ============================================================== -->
+    <div id="view-graphic" class="view-section hidden py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        
+        <!-- Service Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber-200 bg-amber-50 text-amber-700 text-xs font-bold shadow-sm">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Visual Branding
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-black text-slate-900 leading-tight">
+            Professional Graphic Design Solutions
+          </h1>
+          <p class="text-lg text-slate-700 font-semibold">
+            Roll-up X Banners, Student File Covers, Tri-fold Handbills, and A/L Tute Covers.
+          </p>
+          <p class="text-sm text-slate-500">
+            Get high-resolution, print-ready, and social-optimized graphics customized to your specifications.
+          </p>
+        </div>
+
+        <!-- Portfolio & Order Grid -->
+        <div class="space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+            <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+              <i class="fa-solid fa-layer-group text-amber-600"></i> Design Packages & Portfolio
+            </h2>
+            <span class="text-xs font-bold px-3 py-1 rounded-lg bg-slate-900 text-white">Fast 24h Turnaround</span>
+          </div>
+
+          <div id="graphicPortfolioGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Dedicated Graphic Design Customer Feedback -->
+        <div class="pt-10 border-t border-slate-200 space-y-8">
+          <div class="text-center max-w-2xl mx-auto space-y-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Client Proof</span>
+            <h3 class="text-2xl sm:text-3xl font-bold text-slate-900">Graphic Design Feedback & Reviews</h3>
+            <p class="text-xs sm:text-sm text-slate-500">Real feedback received from educators, business owners, and creators.</p>
+          </div>
+
+          <div id="graphicFeedbackGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Populated from siteData.graphicService.feedbacks -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- VIEW D: VIDEO EDITING SERVICE                                  -->
+    <!-- ============================================================== -->
+    <div id="view-video" class="view-section hidden py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        
+        <!-- Service Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber-200 bg-amber-50 text-amber-700 text-xs font-bold shadow-sm">
+            <i class="fa-solid fa-clapperboard"></i> Motion & Pacing
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-black text-slate-900 leading-tight">
+            Professional Video Editing & Motion Graphics
+          </h1>
+          <p class="text-lg text-slate-700 font-semibold">
+            YouTube Videos, TikTok / Instagram Reels, Corporate Promos, Subtitles, and Color Grading.
+          </p>
+          <div class="pt-2">
+            <a href="https://wa.me/94764988206?text=Hello%20KL%20Edits%2C%20I%20want%20to%20order%20Video%20Editing%20services." target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-black text-white font-bold text-sm shadow-md transition-all hover:scale-105">
+              <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+              <span>Order Video Editing (076 498 8206)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Video Editing Showcase / Coming Soon -->
+        <div class="space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+            <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+              <i class="fa-solid fa-film text-amber-600"></i> Video Production Services
+            </h2>
+            <span class="text-xs text-amber-600 font-bold">Inquire on WhatsApp</span>
+          </div>
+
+          <div id="videoPortfolioGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Video Editing info cards rendered by JS -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- VIEW E: WEB DEVELOPMENT SERVICE                                -->
+    <!-- ============================================================== -->
+    <div id="view-web" class="view-section hidden py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        
+        <!-- Service Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber-200 bg-amber-50 text-amber-700 text-xs font-bold shadow-sm">
+            <i class="fa-solid fa-code"></i> Engineering & Web Systems
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-black text-slate-900 leading-tight">
+            Modern & Responsive Web Development Services
+          </h1>
+          <p class="text-lg text-slate-700 font-semibold">
+            Custom websites, boutique resort landing pages, e-commerce, and high-converting web apps.
+          </p>
+          <p class="text-sm text-slate-500">
+            Explore our verified client websites with direct live links below.
+          </p>
+        </div>
+
+        <!-- Live Website Preview Cards Grid -->
+        <div class="space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+            <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+              <i class="fa-solid fa-display text-amber-600"></i> Live Client Websites
+            </h2>
+            <span class="text-xs font-bold px-3 py-1 rounded-lg bg-slate-900 text-white">100% Mobile Responsive</span>
+          </div>
+
+          <div id="webPortfolioGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Dedicated Web Customer Feedback -->
+        <div class="pt-10 border-t border-slate-200 space-y-8">
+          <div class="text-center max-w-2xl mx-auto space-y-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Client Reviews</span>
+            <h3 class="text-2xl sm:text-3xl font-bold text-slate-900">Web Development Client Feedback</h3>
+            <p class="text-xs sm:text-sm text-slate-500">Hear from hospitality and educational brands who launched with us.</p>
+          </div>
+
+          <div id="webFeedbackGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Populated from siteData.webService.feedbacks -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- VIEW F: CONTACT US & DIRECT WHATSAPP SENDER                    -->
+    <!-- ============================================================== -->
+    <div id="view-contact" class="view-section hidden py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber-200 bg-amber-50 text-amber-700 text-xs font-bold shadow-sm">
+            <i class="fa-solid fa-headset"></i> We're Here For You
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-black text-slate-900 leading-tight">
+            Let's Build Something Exceptional Together
+          </h1>
+          <p class="text-slate-600 text-base">
+            Have a project in mind or need quick assistance? Reach out directly via WhatsApp, phone, or fill out the quick message form below.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Contact Info Cards (5 Cols) -->
+          <div class="lg:col-span-5 space-y-4">
+            
+            <!-- WhatsApp / Phone Card -->
+            <a href="https://wa.me/94764988206?text=Hello%20KL%20Edits%2C%20I%20am%20contacting%20you%20from%20your%20website." target="_blank" class="p-6 rounded-2xl light-card flex items-start gap-4 hover:border-amber-500 transition-all group block">
+              <div class="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center text-2xl group-hover:scale-105 transition-transform shadow-md">
+                <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+              </div>
+              <div>
+                <span class="text-xs uppercase tracking-wider text-amber-600 font-bold">WhatsApp / Hotline</span>
+                <h4 class="text-lg font-bold text-slate-900 group-hover:text-amber-600 transition-all">076 498 8206</h4>
+                <p class="text-xs text-slate-500 mt-1">Instant reply & quick order confirmations (+94 76 498 8206)</p>
+              </div>
+            </a>
+
+            <!-- Email Card -->
+            <a href="mailto:kledits.official@gmail.com" class="p-6 rounded-2xl light-card flex items-start gap-4 hover:border-amber-500 transition-all group block">
+              <div class="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center text-2xl group-hover:scale-105 transition-transform">
+                <i class="fa-regular fa-envelope"></i>
+              </div>
+              <div>
+                <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Email Inquiries</span>
+                <h4 class="text-lg font-bold text-slate-900 group-hover:text-amber-600 transition-all">kledits.official@gmail.com</h4>
+                <p class="text-xs text-slate-500 mt-1">Send requirements, proposals, or detailed briefs</p>
+              </div>
+            </a>
+
+            <!-- Location Card -->
+            <div class="p-6 rounded-2xl light-card flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Location</span>
+                <h4 class="text-lg font-bold text-slate-900">Sri Lanka</h4>
+                <p class="text-xs text-slate-500 mt-1">Serving clients island-wide & globally 24/7</p>
+              </div>
+            </div>
+
+            <!-- Working Hours -->
+            <div class="p-6 rounded-2xl light-card flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+              <div>
+                <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Working Hours</span>
+                <h4 class="text-lg font-bold text-slate-900">Mon - Sun (9:00 AM - 10:00 PM)</h4>
+                <p class="text-xs text-slate-500 mt-1">Quick turnaround & fast delivery options available</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Quick WhatsApp Message Sender Form (7 Cols) -->
+          <div class="lg:col-span-7 light-card p-8 rounded-3xl relative overflow-hidden">
+            <div class="mb-6 space-y-1">
+              <h3 class="text-2xl font-bold text-slate-900">Quick WhatsApp Message Sender</h3>
+              <p class="text-xs sm:text-sm text-slate-500">Fill in your details and click "Send via WhatsApp" to immediately start a chat with pre-formatted message.</p>
+            </div>
+
+            <form id="quickContactForm" onsubmit="handleQuickContactSubmit(event)" class="space-y-5">
+              
+              <div class="space-y-1.5">
+                <label for="userName" class="block text-xs font-bold uppercase tracking-wider text-slate-700">Your Name / Business Name *</label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400"><i class="fa-regular fa-user"></i></span>
+                  <input type="text" id="userName" required placeholder="e.g. Kavindu Perera" class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-slate-900 transition-all text-sm">
+                </div>
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="userService" class="block text-xs font-bold uppercase tracking-wider text-slate-700">Select Service Required *</label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400"><i class="fa-solid fa-list-check"></i></span>
+                  <select id="userService" required class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-slate-900 transition-all text-sm">
+                    <option value="CV Design Service (Rs. 600/=)">CV Design Service (Rs. 600/=)</option>
+                    <option value="Graphic Design (Logos/Flyers/Banners)">Graphic Design (Logos/Flyers/Banners)</option>
+                    <option value="Web Development & Landing Page">Web Development & Landing Page</option>
+                    <option value="Video Editing & Motion Graphics">Video Editing & Motion Graphics</option>
+                    <option value="Other Custom Inquiry">Other Custom Inquiry</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="userMessage" class="block text-xs font-bold uppercase tracking-wider text-slate-700">Your Message / Requirements</label>
+                <textarea id="userMessage" rows="4" placeholder="Briefly describe what you need (e.g. 'I need an X-banner similar to Happy Cone' or 'File Cover design')..." class="w-full p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-slate-900 transition-all text-sm resize-none"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 rounded-xl bg-slate-900 hover:bg-black text-white font-extrabold text-sm shadow-xl shadow-slate-900/10 transition-all duration-300 flex items-center justify-center gap-2.5">
+                <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+                <span>Send via WhatsApp (+94 76 498 8206)</span>
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ============================================================== -->
+  <!-- LIGHTBOX / ZOOM MODAL (REUSABLE FOR ALL FEEDBACK & IMAGES)     -->
+  <!-- ============================================================== -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-brand-navy/95 backdrop-blur-md">
+    <div class="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center justify-center">
+      <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-brand-gold text-2xl p-2 focus:outline-none transition-colors">
+        <i class="fa-solid fa-xmark"></i> Close
+      </button>
+      <img id="lightboxImg" src="" alt="Enlarged Preview" class="max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl border border-brand-gold/30">
+      <p id="lightboxCaption" class="text-center text-white text-sm mt-3 font-semibold"></p>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- FOOTER                                                         -->
+  <!-- ============================================================== -->
+  <footer class="border-t border-brand-navyBorder bg-brand-navyLight mt-20 relative z-10 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="/public/images/logo.jpg" alt="KL Edits Logo" class="w-11 h-11 rounded-xl object-contain bg-black shadow-md border border-brand-gold/40">
+            <span class="text-xl font-bold text-white">KL Edits</span>
+          </div>
+          <p class="text-sm font-semibold text-brand-gold">"Your Professional Design Partner"</p>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Delivering high-converting visual branding, ATS-friendly CV design, responsive web experiences, and cinematic video editing.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Quick Navigation</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><button onclick="switchView('home')" class="hover:text-brand-gold transition-colors">Home Page</button></li>
+            <li><button onclick="switchView('cv')" class="hover:text-brand-gold transition-colors">CV Design (12 Templates)</button></li>
+            <li><button onclick="switchView('graphic')" class="hover:text-brand-gold transition-colors">Graphic Design</button></li>
+            <li><button onclick="switchView('video')" class="hover:text-brand-gold transition-colors">Video Editing</button></li>
+            <li><button onclick="switchView('web')" class="hover:text-brand-gold transition-colors">Web Development Projects</button></li>
+            <li><button onclick="switchView('contact')" class="hover:text-brand-gold transition-colors">Contact & Order</button></li>
+          </ul>
+        </div>
+
+        <!-- Contact Summary -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Direct Contact</h4>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li class="flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
+              <a href="https://wa.me/94764988206" target="_blank" class="hover:text-brand-gold font-semibold transition-colors">076 498 8206</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-brand-gold text-sm"></i>
+              <span>+94 76 498 8206</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-regular fa-envelope text-brand-gold text-sm"></i>
+              <span>kledits.official@gmail.com</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-location-dot text-brand-gold text-sm"></i>
+              <span>Sri Lanka (Global Delivery)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Media Buttons -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Connect With Us</h4>
+          <p class="text-xs text-slate-400 mb-4">Follow our channels to see latest design trends, client feedback, and discounts.</p>
+          <div class="flex items-center gap-3">
+            <a href="https://wa.me/94764988206" target="_blank" title="WhatsApp" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-brand-gold hover:text-brand-navy border border-brand-navyBorder flex items-center justify-center text-slate-300 transition-all hover:scale-110">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" title="Facebook Page" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-brand-gold hover:text-brand-navy border border-brand-navyBorder flex items-center justify-center text-slate-300 transition-all hover:scale-110">
+              <i class="fa-brands fa-facebook-f text-lg"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" title="YouTube Channel" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-brand-gold hover:text-brand-navy border border-brand-navyBorder flex items-center justify-center text-slate-300 transition-all hover:scale-110">
+              <i class="fa-brands fa-youtube text-lg"></i>
+            </a>
+            <a href="https://kledits.netlify.app" target="_blank" title="Netlify Website" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-brand-gold hover:text-brand-navy border border-brand-navyBorder flex items-center justify-center text-slate-300 transition-all hover:scale-110">
+              <i class="fa-solid fa-globe text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-brand-navyBorder flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© <span id="currentYear"></span> <strong>KL Edits</strong>. All Rights Reserved. Tagline: <em>Your Professional Design Partner</em>.</p>
+        <p class="flex items-center gap-1">
+          Designed with Dark Navy & Deep Gold Luxury Palette.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================== -->
+  <!-- JAVASCRIPT CONFIGURATION & LOGIC                               -->
+  <!-- ============================================================== -->
+  <script>
+    /* ============================================================
+       EASY CONFIGURATION OBJECT (siteData)
+       ============================================================ */
+    const siteData = {
+      // General Agency Details
+      agency: {
+        name: "KL Edits",
+        tagline: "Your Professional Design Partner",
+        whatsappNumber: "94764988206",
+        displayPhone: "076 498 8206",
+        email: "kledits.official@gmail.com"
+      },
+
+      // 1. Hero Slideshow Images (Optimized 16:9 Landscape for Hero Section)
+      heroSlides: [
+        {
+          image: "/public/images/hero-cv.jpg",
+          title: "Professional Resume & CV Design"
+        },
+        {
+          image: "/public/images/hero-graphic.jpg",
+          title: "Impactful Graphic & Branding Solutions"
+        },
+        {
+          image: "/public/images/hero-web.jpg",
+          title: "Modern Web Launch & Development"
+        }
+      ],
+
+      // 2. CV Design Service (5 Real Uploaded Templates + Remaining 7 Editable)
+      cvService: {
+        price: "Rs. 600/=",
+        templates: [
+          {
+            id: 1,
+            name: "Kavindu Kavishka - Executive CV #01",
+            code: "CV-01",
+            price: "Rs. 600/=",
+            image: "/public/images/cv-01.jpg",
+            description: "Modern two-tone navy & white corporate layout with profile summary, skills bars, and structured education."
+          },
+          {
+            id: 2,
+            name: "Sayuri Perera - Executive Resume #02",
+            code: "CV-02",
+            price: "Rs. 600/=",
+            image: "/public/images/cv-02.jpg",
+            description: "Cyan & dark blue executive resume with dedicated skills & competencies, languages, and work experience."
+          },
+          {
+            id: 3,
+            name: "Sanuki Ahinsa - Career Growth CV #03",
+            code: "CV-03",
+            price: "Rs. 600/=",
+            image: "/public/images/cv-03.jpg",
+            description: "High-impact layout with detailed work history, qualifications, referees, and modern circular avatar styling."
+          },
+          {
+            id: 4,
+            name: "Ayesha Sewmini - Professional Resume #04",
+            code: "CV-04",
+            price: "Rs. 600/=",
+            image: "/public/images/cv-04.jpg",
+            description: "Minimalist corporate header layout with extensive career profile, extracurriculars, and verified layout."
+          },
+          {
+            id: 5,
+            name: "Kavinda Lakshan - Corporate Resume #05",
+            code: "CV-05",
+            price: "Rs. 600/=",
+            image: "/public/images/cv-05.jpg",
+            description: "Clean steel blue & slate executive design with comprehensive education, computer skills, and referees."
+          },
+          {
+            id: 6,
+            name: "International ATS Format #06",
+            code: "CV-06",
+            price: "Rs. 600/=",
+            image: "https://images.unsplash.com/photo-1626125345510-4603468eedfb?auto=format&fit=crop&w=800&q=80",
+            description: "100% ATS score verified layout designed for overseas work visa applications."
+          },
+          {
+            id: 7,
+            name: "Corporate Banker & Finance #07",
+            code: "CV-07",
+            price: "Rs. 600/=",
+            image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80",
+            description: "Sophisticated navy & gold palette highlighting metrics and ROI achievements."
+          },
+          {
+            id: 8,
+            name: "Sales & Marketing Lead #08",
+            code: "CV-08",
+            price: "Rs. 600/=",
+            image: "https://images.unsplash.com/photo-1534972195531-a756b1126f24?auto=format&fit=crop&w=800&q=80",
+            description: "Persuasive and structured design highlighting campaign wins and growth stats."
+          },
+          {
+            id: 9,
+            name: "Fresh Graduate Starter #09",
+            code: "CV-09",
+            price: "Rs. 600/=",
+            image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+            description: "Emphasizes university projects, internships, leadership, and soft skills."
+          },
+          {
+            id: 10,
+            name: "Hospitality & Customer Care #10",
+            code: "CV-10",
+            price: "Rs. 600/=",
+            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
+            description: "Warm, professional resume suitable for hotels, aviation, and relations."
+          },
+          {
+            id: 11,
+            name: "Minimalist Monochrome CV #11",
+            code: "CV-11",
+            price: "Rs. 600/=",
+            image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80",
+            description: "Ultra clean typography with timeless Swiss design aesthetics."
+          },
+          {
+            id: 12,
+            name: "Luxury Dark-Accent Resume #12",
+            code: "CV-12",
+            price: "Rs. 600/=",
+            image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
+            description: "Premium modern design for consultants and executive leaders."
+          }
+        ],
+        feedbacks: [
+          {
+            image: "/public/images/feedback-imashi.jpg",
+            clientName: "Imashi Singhearachchi",
+            review: "Thank you so much KL edits. Great and friendly service. Highly Recommend ❤️❤️"
+          },
+          {
+            image: "/public/images/feedback-pawani.jpg",
+            clientName: "Pawani Wathsala",
+            review: "Excellent and highly professional service! The one-page CV was done perfectly. I would definitely recommend this service to anyone looking for a high-quality CV. ❤️❤️"
+          },
+          {
+            image: "/public/images/feedback-himashi.png",
+            clientName: "Himashi Kavindya",
+            review: "ඇත්තටම හොඳ friendly service එකක් තියෙන්නේ. මන් පලවෙනි වතාවට cv එකක් හදාගත්තේ. එයාලගේ තියනවා google form එකක්, එකෙන් ලේසියෙන් details යවන්න පුළුවන් උනා. ගොඩාක් ස්තූති!"
+          },
+          {
+            image: "/public/images/feedback-chandika.jpg",
+            clientName: "Chandika Dissanayake & Shanika Sandaruwani",
+            review: "Very good service ❤️ | Good service ❤️✌️"
+          }
+        ]
+      },
+
+      // 3. Graphic Design Service (Real Works - No Prices, Full View Supported)
+      graphicService: {
+        portfolio: [
+          {
+            title: "Happy Cone - Roll-up X Banner",
+            category: "X Banner",
+            image: "/public/images/x-banner.jpg",
+            desc: "Vibrant modern roll-up standee banner design with high-resolution food and product graphics."
+          },
+          {
+            title: "Nilanka Ramanayake - Educational File Cover",
+            category: "File Cover",
+            image: "/public/images/file-cover.jpg",
+            desc: "Professional dual-sided student course folder & file cover with timetable and certificate course breakdown."
+          },
+          {
+            title: "English Diploma Course - Promotional Handbill",
+            category: "Handbill",
+            image: "/public/images/handbill.jpg",
+            desc: "Informative promotional handbill layout with syllabus details, student feedback, and accreditation."
+          },
+          {
+            title: "Kinmini Jayawardana - ICT Tute Cover",
+            category: "Tute Cover",
+            image: "/public/images/tute-cover.jpg",
+            desc: "Bold book & tute cover with modern digital illustration for Advanced Level ICT students."
+          },
+          {
+            title: "2025 A/L Geography Class Flyer",
+            category: "Class Flyer",
+            image: "/public/images/graphic-01.jpg",
+            desc: "High converting green & white typography layout for online & physical classes."
+          },
+          {
+            title: "Sinhala Language & Literature Traditional Flyer",
+            category: "Traditional Flyer",
+            image: "/public/images/graphic-02.jpg",
+            desc: "Striking black & red Sri Lankan cultural illustration with clear course breakdown."
+          }
+        ],
+        feedbacks: [
+          {
+            image: "/public/images/feedback-madura.jpg",
+            clientName: "Madura Kokila",
+            review: "Maru service ❤️😍 ... Tute හදාගන්න Fb post හදාගන්න Highly Recommend .....❤️❤️"
+          },
+          {
+            image: "/public/images/feedback-keeth.jpg",
+            clientName: "Keeth Jayawardhana",
+            review: "Highly recommended. Reasonable Price with Best Quality Graphic."
+          },
+          {
+            image: "/public/images/feedback-ashan.jpg",
+            clientName: "Ashan Indusara",
+            review: "Good and Fast Job brother. Keep it up 💖"
+          },
+          {
+            image: "/public/images/feedback-shenal.jpg",
+            clientName: "Shenal Gunarathne",
+            review: "Highly recommend 🫶"
+          }
+        ]
+      },
+
+      // 4. Video Editing Service (Ready / Clean Status)
+      videoService: {
+        info: [
+          {
+            title: "Reels & TikTok Editing",
+            category: "Short-form Content",
+            desc: "Punchy captions, zoom cuts, sound effects, and color grading tuned for virality."
+          },
+          {
+            title: "YouTube Documentary & Vlog Editing",
+            category: "Long-form Production",
+            desc: "Story pacing, dynamic B-rolls, motion graphics, and audio mastering."
+          },
+          {
+            title: "Commercial & Business Promos",
+            category: "Commercial Motion",
+            desc: "Product highlight videos, promotional ads, and social campaign teasers."
+          }
+        ]
+      },
+
+      // 5. Web Development Service (Real Client Screenshots from User)
+      webService: {
+        projects: [
+          {
+            title: "Sri Shahrukh Lake Resort",
+            description: "Luxury lakeside resort website with room showcases, amenities, and direct online booking.",
+            image: "/public/images/web-srishahrukh.png",
+            liveUrl: "https://srishahrukhlakeresort.vercel.app",
+            tags: ["Resort", "Vercel", "Responsive", "Luxury"]
+          },
+          {
+            title: "Misty Heights Endawala",
+            description: "Hill-country boutique stay portal featuring scenic mountain panoramas and reservation inquiry.",
+            image: "/public/images/web-mistyheights.png",
+            liveUrl: "https://mistyheightsendawala.lk",
+            tags: ["Hotel", "Domain .LK", "Booking", "Speed"]
+          },
+          {
+            title: "Rainforest River Song",
+            description: "Eco-tourism nature retreat site showcasing rainforest river cabins, packages, and eco tours.",
+            image: "/public/images/web-rainforest.png",
+            liveUrl: "https://rainforestriversong.com",
+            tags: ["Eco Resort", ".COM", "Modern UI", "Tours"]
+          },
+          {
+            title: "English with Nilanka Ramanayake",
+            description: "Interactive student registration and placement test form platform for English courses.",
+            image: "/public/images/web-nilankaform.png",
+            liveUrl: "https://englishnilankaramanayake-form.vercel.app/",
+            tags: ["Education", "Web Form", "Database", "Vercel"]
+          }
+        ],
+        feedbacks: [
+          {
+            image: "/public/images/web-srishahrukh.png",
+            clientName: "Sri Shahrukh Lake Resort",
+            review: "Website loads instantly on guest phones. Direct WhatsApp booking drove reservations."
+          },
+          {
+            image: "/public/images/web-mistyheights.png",
+            clientName: "Misty Heights Endawala",
+            review: "Captured the mist and mountain aesthetic beautifully. Great technical execution."
+          },
+          {
+            image: "/public/images/web-rainforest.png",
+            clientName: "Rainforest River Song",
+            review: "Foreign tourists praised the ease of navigation. Highly reliable web developers."
+          },
+          {
+            image: "/public/images/web-nilankaform.png",
+            clientName: "English with Nilanka Ramanayake",
+            review: "Seamless enrollment form for students across Sri Lanka without server slowdowns."
+          }
+        ]
+      },
+
+      // 6. General Client Feedback (Shown on Landing Home page under "What Our Clients Say & Received")
+      generalFeedback: [
+        {
+          image: "/public/images/feedback-imashi.jpg",
+          title: "Imashi Singhearachchi - 5 Star CV Review",
+          client: "Imashi S."
+        },
+        {
+          image: "/public/images/feedback-pawani.jpg",
+          title: "Pawani Wathsala - Professional CV Review",
+          client: "Pawani W."
+        },
+        {
+          image: "/public/images/feedback-himashi.png",
+          title: "Himashi Kavindya - Fast Service Review",
+          client: "Himashi K."
+        },
+        {
+          image: "/public/images/feedback-chandika.jpg",
+          title: "Chandika & Shanika - Client Feedback",
+          client: "Chandika & Shanika"
+        },
+        {
+          image: "/public/images/feedback-madura.jpg",
+          title: "Madura Kokila - Tute & FB Post Review",
+          client: "Madura K."
+        },
+        {
+          image: "/public/images/feedback-keeth.jpg",
+          title: "Keeth Jayawardhana - Best Quality Graphic",
+          client: "Keeth J."
+        },
+        {
+          image: "/public/images/feedback-ashan.jpg",
+          title: "Ashan Indusara - Good & Fast Job",
+          client: "Ashan I."
+        },
+        {
+          image: "/public/images/feedback-shenal.jpg",
+          title: "Shenal Gunarathne - Highly Recommend",
+          client: "Shenal G."
+        }
+      ]
+    };
+
+
+    /* ============================================================
+       HELPER FUNCTIONS
+       ============================================================ */
+    function makeWhatsAppLink(message) {
+      return `https://wa.me/${siteData.agency.whatsappNumber}?text=${encodeURIComponent(message)}`;
+    }
+
+
+    /* ============================================================
+       RENDER FUNCTIONS FOR ALL SECTIONS (NAVY & GOLD THEME)
+       ============================================================ */
+
+    // Render Hero Slideshow
+    let currentHeroIndex = 0;
+    let heroInterval = null;
+
+    function initHeroSlider() {
+      const container = document.getElementById('heroSliderContainer');
+      const indicators = document.getElementById('sliderIndicators');
+      if (!container || !indicators) return;
+
+      container.innerHTML = '';
+      indicators.innerHTML = '';
+
+      siteData.heroSlides.forEach((slide, idx) => {
+        const div = document.createElement('div');
+        div.className = `slide-bg absolute inset-0 flex items-center justify-center p-1 sm:p-2 transition-all duration-700 ease-in-out ${idx === 0 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-95 z-0'}`;
+        div.id = `hero-slide-${idx}`;
+        div.innerHTML = `
+          <img src="${slide.image}" alt="${slide.title}" class="max-w-full max-h-full object-contain rounded-xl shadow-lg cursor-pointer" onclick="openLightbox('${slide.image}', '${slide.title}')">
+        `;
+        container.appendChild(div);
+
+        const dot = document.createElement('button');
+        dot.className = `h-2 rounded-full transition-all duration-300 ${idx === 0 ? 'bg-amber-400 w-8 shadow-[0_0_8px_rgba(251,191,36,0.6)]' : 'bg-slate-600 w-2 hover:bg-slate-400'}`;
+        dot.onclick = () => setHeroSlide(idx);
+        dot.id = `hero-dot-${idx}`;
+        dot.setAttribute('aria-label', `Go to slide ${idx + 1}`);
+        indicators.appendChild(dot);
+      });
+
+      updateHeroLabels(0);
+
+      clearInterval(heroInterval);
+      heroInterval = setInterval(() => {
+        const nextIndex = (currentHeroIndex + 1) % siteData.heroSlides.length;
+        setHeroSlide(nextIndex);
+      }, 4500);
+    }
+
+    function setHeroSlide(index) {
+      if (index === currentHeroIndex) return;
+
+      const prevSlide = document.getElementById(`hero-slide-${currentHeroIndex}`);
+      const nextSlide = document.getElementById(`hero-slide-${index}`);
+      const prevDot = document.getElementById(`hero-dot-${currentHeroIndex}`);
+      const nextDot = document.getElementById(`hero-dot-${index}`);
+
+      if (prevSlide && nextSlide) {
+        prevSlide.classList.remove('opacity-100', 'scale-100', 'z-10');
+        prevSlide.classList.add('opacity-0', 'scale-95', 'z-0');
+
+        nextSlide.classList.remove('opacity-0', 'scale-95', 'z-0');
+        nextSlide.classList.add('opacity-100', 'scale-100', 'z-10');
+      }
+
+      if (prevDot && nextDot) {
+        prevDot.classList.remove('bg-amber-400', 'w-8', 'shadow-[0_0_8px_rgba(251,191,36,0.6)]');
+        prevDot.classList.add('bg-slate-600', 'w-2');
+
+        nextDot.classList.remove('bg-slate-600', 'w-2');
+        nextDot.classList.add('bg-amber-400', 'w-8', 'shadow-[0_0_8px_rgba(251,191,36,0.6)]');
+      }
+
+      // Update text buttons
+      [0, 1, 2].forEach(i => {
+        const tabBtn = document.getElementById(`heroTab-${i}`);
+        if (tabBtn) {
+          if (i === index) {
+            tabBtn.className = "text-amber-400 font-extrabold transition-colors";
+          } else {
+            tabBtn.className = "text-slate-400 hover:text-slate-200 transition-colors";
+          }
+        }
+      });
+
+      currentHeroIndex = index;
+      updateHeroLabels(index);
+    }
+
+    function prevHeroSlide() {
+      const prevIndex = (currentHeroIndex - 1 + siteData.heroSlides.length) % siteData.heroSlides.length;
+      setHeroSlide(prevIndex);
+      resetHeroInterval();
+    }
+
+    function nextHeroSlide() {
+      const nextIndex = (currentHeroIndex + 1) % siteData.heroSlides.length;
+      setHeroSlide(nextIndex);
+      resetHeroInterval();
+    }
+
+    function resetHeroInterval() {
+      clearInterval(heroInterval);
+      heroInterval = setInterval(() => {
+        const nextIndex = (currentHeroIndex + 1) % siteData.heroSlides.length;
+        setHeroSlide(nextIndex);
+      }, 4500);
+    }
+
+    function updateHeroLabels(index) {
+      const catEl = document.getElementById('heroCategoryLabel');
+      if (catEl) {
+        if (index === 0) catEl.innerText = "CV & RESUME DESIGN";
+        else if (index === 1) catEl.innerText = "GRAPHIC & PRINT DESIGN";
+        else catEl.innerText = "WEB DEVELOPMENT";
+      }
+
+      // Update tab active classes
+      [0, 1, 2].forEach(i => {
+        const tabBtn = document.getElementById(`heroTab-${i}`);
+        if (tabBtn) {
+          if (i === index) {
+            tabBtn.className = "text-amber-400 font-extrabold transition-colors";
+          } else {
+            tabBtn.className = "text-slate-400 hover:text-slate-200 transition-colors";
+          }
+        }
+      });
+    }
+
+
+    // 1. Render Home Preview Grids (Dark Navy & Gold Cards)
+    function renderHomePreviews() {
+      // 1A. Home CV 5 Real Uploaded Previews
+      const homeCvGrid = document.getElementById('homeCvGrid');
+      if (homeCvGrid) {
+        const fiveCvs = siteData.cvService.templates.slice(0, 5);
+        homeCvGrid.innerHTML = fiveCvs.map(item => `
+          <div class="light-card rounded-2xl overflow-hidden group flex flex-col">
+            <div class="relative overflow-hidden aspect-[3/4] bg-slate-100 cursor-pointer" onclick="openLightbox('${item.image}', '${item.name} - ${item.price}')">
+              <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="px-3 py-1 rounded-full bg-slate-900 text-white text-xs font-bold flex items-center gap-1.5 shadow-lg">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i> Zoom
+                </span>
+              </div>
+              <span class="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded-full bg-slate-900/90 backdrop-blur-md text-amber-400 font-extrabold text-[11px] shadow-sm border border-amber-400/30">
+                ${item.price}
+              </span>
+            </div>
+            <div class="p-3.5 flex flex-col justify-between flex-grow">
+              <div>
+                <h4 class="font-bold text-slate-900 text-xs truncate" title="${item.name}">${item.name}</h4>
+                <p class="text-[10px] text-amber-600 font-bold">${item.code}</p>
+              </div>
+              <a href="${makeWhatsAppLink(`Hello KL Edits, I would like to order ${item.name} (Price: ${item.price}).`)}" target="_blank" class="mt-2.5 w-full py-2 rounded-xl bg-slate-900 hover:bg-black text-white text-[11px] font-bold flex items-center justify-center gap-1.5 transition-all shadow-md">
+                <i class="fa-brands fa-whatsapp text-emerald-400"></i> Order
+              </a>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // 1B. Home Graphic 5 Previews (Full View Cards - No Prices)
+      const homeGraphicGrid = document.getElementById('homeGraphicGrid');
+      if (homeGraphicGrid) {
+        const fiveGraphics = siteData.graphicService.portfolio.slice(0, 5);
+        homeGraphicGrid.innerHTML = fiveGraphics.map(item => `
+          <div class="light-card rounded-2xl overflow-hidden group flex flex-col">
+            <div class="relative overflow-hidden aspect-[4/5] bg-slate-100 flex items-center justify-center p-2 cursor-pointer" onclick="openLightbox('${item.image}', '${item.title}')">
+              <img src="${item.image}" alt="${item.title}" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500 rounded-lg">
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-2xl">
+                <span class="px-3 py-1 rounded-full bg-slate-900 text-white text-xs font-bold flex items-center gap-1.5 shadow-lg">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i> View Full
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-slate-900/90 text-amber-300 font-extrabold text-[10px] shadow-sm border border-amber-400/30">
+                ${item.category}
+              </span>
+            </div>
+            <div class="p-3.5 flex flex-col justify-between flex-grow">
+              <div>
+                <h4 class="font-bold text-slate-900 text-xs truncate" title="${item.title}">${item.title}</h4>
+              </div>
+              <a href="${makeWhatsAppLink(`Hello KL Edits, I want to order Graphic Design: ${item.title}.`)}" target="_blank" class="mt-2.5 w-full py-2 rounded-xl bg-slate-900 hover:bg-black text-white text-[11px] font-bold flex items-center justify-center gap-1.5 transition-all shadow-sm">
+                <i class="fa-brands fa-whatsapp text-emerald-400"></i> Order Design
+              </a>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // 1C. Home Video Section
+      const homeVideoGrid = document.getElementById('homeVideoGrid');
+      if (homeVideoGrid) {
+        homeVideoGrid.innerHTML = `
+          <div class="col-span-full light-card rounded-2xl p-8 text-center space-y-4">
+            <div class="w-16 h-16 mx-auto rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-3xl">
+              <i class="fa-solid fa-clapperboard"></i>
+            </div>
+            <div class="max-w-xl mx-auto space-y-2">
+              <h4 class="text-xl font-bold text-slate-900">Video Editing Services Available</h4>
+              <p class="text-xs sm:text-sm text-slate-500">
+                We edit YouTube videos, Reels, TikTok shorts, and promotional ads. Contact us directly on WhatsApp to get custom video edits!
+              </p>
+            </div>
+            <a href="https://wa.me/94764988206?text=Hello%20KL%20Edits%2C%20I%20am%20inquiring%20about%20Video%20Editing%20services." target="_blank" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-black text-white font-bold text-xs shadow-md transition-all">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
+              <span>Order Custom Video Editing</span>
+            </a>
+          </div>
+        `;
+      }
+
+      // 1D. Home Web 4 Real Client Websites Preview
+      const homeWebGrid = document.getElementById('homeWebGrid');
+      if (homeWebGrid) {
+        homeWebGrid.innerHTML = siteData.webService.projects.map(item => `
+          <div class="light-card rounded-2xl overflow-hidden group flex flex-col">
+            <div class="relative aspect-video bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('${item.image}', '${item.title}')">
+              <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-full bg-slate-900/90 text-amber-400 border border-amber-400/30 font-bold text-[10px] shadow-sm">
+                Live Site
+              </span>
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow space-y-3">
+              <div>
+                <h4 class="font-bold text-slate-900 text-xs truncate" title="${item.title}">${item.title}</h4>
+                <p class="text-[10px] text-slate-500 line-clamp-2 mt-1 leading-relaxed">${item.description}</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <a href="${item.liveUrl}" target="_blank" class="flex-1 py-1.5 rounded-xl border border-slate-300 hover:bg-slate-100 text-slate-800 text-[11px] font-bold text-center transition-colors flex items-center justify-center gap-1.5">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-amber-600"></i>
+                  <span>Visit Site</span>
+                </a>
+                <a href="${makeWhatsAppLink(`Hello KL Edits, I am interested in building a website similar to '${item.title}' (${item.liveUrl}).`)}" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-900 text-white hover:bg-black text-[11px] font-bold transition-colors" title="Order Similar Web">
+                  <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // 1E. Home General Feedback Grid
+      const generalFeedbackGrid = document.getElementById('generalFeedbackGrid');
+      if (generalFeedbackGrid) {
+        generalFeedbackGrid.innerHTML = siteData.generalFeedback.map(fb => `
+          <div class="light-card rounded-2xl overflow-hidden group cursor-pointer" onclick="openLightbox('${fb.image}', '${fb.title} - ${fb.client}')">
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
+              <img src="${fb.image}" alt="${fb.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="px-3 py-1 rounded-full bg-slate-900 text-white text-xs font-bold shadow-md">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i> View Full
+                </span>
+              </div>
+            </div>
+            <div class="p-3.5">
+              <h4 class="text-xs font-bold text-slate-900 truncate group-hover:text-amber-600 transition-colors">${fb.title}</h4>
+              <div class="flex items-center justify-between text-[11px] text-slate-500 mt-1">
+                <span>Client: ${fb.client}</span>
+                <span class="text-amber-500"><i class="fa-solid fa-star"></i> 5.0</span>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+
+    // 2. Render Full CV Service View (12 Templates & Feedback)
+    function renderCvView() {
+      const grid = document.getElementById('cvTemplatesGrid');
+      if (!grid) return;
+
+      grid.innerHTML = siteData.cvService.templates.map(item => `
+        <div class="light-card rounded-2xl overflow-hidden group flex flex-col">
+          <!-- Card Image with Zoom Button -->
+          <div class="relative aspect-[3/4] bg-slate-100 overflow-hidden cursor-pointer" onclick="openLightbox('${item.image}', '${item.name} - ${item.price}')">
+            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+              <span class="px-3 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-bold shadow-md">
+                <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Preview Template
+              </span>
+            </div>
+            <!-- Price Badge -->
+            <div class="absolute top-3 right-3 px-3 py-1 rounded-full bg-slate-900/90 backdrop-blur-md border border-amber-400/30 text-amber-400 font-extrabold text-xs shadow-sm">
+              ${item.price}
+            </div>
+            <!-- Code Badge -->
+            <div class="absolute top-3 left-3 px-2.5 py-0.5 rounded-lg bg-amber-500 text-slate-950 font-black text-[11px]">
+              ${item.code}
+            </div>
+          </div>
+
+          <!-- Card Content & WhatsApp Action -->
+          <div class="p-4 flex flex-col justify-between flex-grow space-y-3">
+            <div>
+              <h3 class="font-bold text-slate-900 text-sm group-hover:text-amber-600 transition-colors">${item.name}</h3>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2 leading-relaxed">${item.description}</p>
+            </div>
+
+            <div class="pt-2 border-t border-slate-100 space-y-2">
+              <div class="flex items-center justify-between text-xs font-semibold">
+                <span class="text-slate-500">Price:</span>
+                <span class="text-base font-extrabold text-slate-900">${item.price}</span>
+              </div>
+
+              <!-- Direct WhatsApp Order Button -->
+              <a href="${makeWhatsAppLink(`Hello KL Edits, I would like to order ${item.name} (Price: ${item.price}).`)}" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-black text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all">
+                <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i>
+                <span>Order Now (${item.price})</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // Dedicated CV Feedback Grid
+      const feedbackGrid = document.getElementById('cvFeedbackGrid');
+      if (feedbackGrid) {
+        feedbackGrid.innerHTML = siteData.cvService.feedbacks.map(fb => `
+          <div class="light-card rounded-2xl overflow-hidden group cursor-pointer" onclick="openLightbox('${fb.image}', 'CV Client Review: ${fb.clientName}')">
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
+              <img src="${fb.image}" alt="${fb.clientName}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="px-3 py-1 rounded-full bg-slate-900 text-white text-xs font-bold">
+                  <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Zoom Proof
+                </span>
+              </div>
+            </div>
+            <div class="p-3.5">
+              <div class="flex items-center gap-1 text-amber-500 text-xs mb-1">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <h4 class="text-xs font-bold text-slate-900">${fb.clientName}</h4>
+              <p class="text-[11px] text-slate-500 italic line-clamp-2 mt-1">"${fb.review}"</p>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+
+    // 3. Render Graphic Design View (Includes 4 Real Uploaded Works)
+    function renderGraphicView() {
+      const grid = document.getElementById('graphicPortfolioGrid');
+      if (!grid) return;
+
+      grid.innerHTML = siteData.graphicService.portfolio.map(item => `
+        <div class="light-card rounded-2xl overflow-hidden group flex flex-col">
+          <div class="relative aspect-[3/4] bg-slate-50 flex items-center justify-center p-3 overflow-hidden cursor-pointer" onclick="openLightbox('${item.image}', '${item.title}')">
+            <img src="${item.image}" alt="${item.title}" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500 rounded-lg">
+            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-2xl">
+              <span class="px-3.5 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-bold shadow-md">
+                <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> View Full
+              </span>
+            </div>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-900/90 text-amber-300 text-[10px] font-black uppercase tracking-wider shadow-sm border border-amber-400/30">
+              ${item.category}
+            </span>
+          </div>
+
+          <div class="p-4 flex flex-col justify-between flex-grow space-y-3">
+            <div>
+              <h3 class="font-bold text-slate-900 text-sm group-hover:text-amber-600 transition-colors">${item.title}</h3>
+              <p class="text-xs text-slate-500 mt-1 leading-relaxed">${item.desc}</p>
+            </div>
+
+            <a href="${makeWhatsAppLink(`Hello KL Edits, I would like to order Graphic Design: ${item.title}.`)}" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-black text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all">
+              <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i>
+              <span>Order on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      `).join('');
+
+      // Dedicated Graphic Feedback Grid
+      const feedbackGrid = document.getElementById('graphicFeedbackGrid');
+      if (feedbackGrid) {
+        feedbackGrid.innerHTML = siteData.graphicService.feedbacks.map(fb => `
+          <div class="light-card rounded-2xl overflow-hidden group cursor-pointer" onclick="openLightbox('${fb.image}', 'Graphic Client Review: ${fb.clientName}')">
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
+              <img src="${fb.image}" alt="${fb.clientName}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="px-3 py-1 rounded-full bg-slate-900 text-white text-xs font-bold">
+                  <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Zoom Proof
+                </span>
+              </div>
+            </div>
+            <div class="p-3.5">
+              <div class="flex items-center gap-1 text-amber-500 text-xs mb-1">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <h4 class="text-xs font-bold text-slate-900">${fb.clientName}</h4>
+              <p class="text-[11px] text-slate-500 italic line-clamp-2 mt-1">"${fb.review}"</p>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+
+    // 4. Render Video Editing View (Clean status cards)
+    function renderVideoView() {
+      const grid = document.getElementById('videoPortfolioGrid');
+      if (!grid) return;
+
+      grid.innerHTML = siteData.videoService.info.map(item => `
+        <div class="light-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <span class="text-xs uppercase tracking-wider text-amber-600 font-extrabold">${item.category}</span>
+            <h3 class="text-lg font-bold text-slate-900">${item.title}</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">${item.desc}</p>
+          </div>
+          <a href="${makeWhatsAppLink(`Hello KL Edits, I want to inquire about ${item.title}.`)}" target="_blank" class="w-full py-2.5 rounded-xl border border-slate-300 hover:border-slate-900 hover:bg-slate-900 hover:text-white text-slate-800 font-bold text-xs flex items-center justify-center gap-2 transition-all">
+            <i class="fa-brands fa-whatsapp text-sm text-emerald-600"></i>
+            <span>Inquire on WhatsApp</span>
+          </a>
+        </div>
+      `).join('');
+    }
+
+    // 5. Render Web Development View (4 Real Client Website Links)
+    function renderWebView() {
+      const grid = document.getElementById('webPortfolioGrid');
+      if (!grid) return;
+
+      grid.innerHTML = siteData.webService.projects.map(item => `
+        <div class="light-card rounded-2xl overflow-hidden group flex flex-col">
+          <div class="relative aspect-video bg-slate-900 overflow-hidden cursor-pointer" onclick="openLightbox('${item.image}', '${item.title}')">
+            <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 px-3 py-0.5 rounded-full bg-slate-900/90 text-amber-400 border border-amber-400/30 text-[11px] font-bold shadow-sm">
+              Live Preview
+            </span>
+          </div>
+
+          <div class="p-5 flex flex-col justify-between flex-grow space-y-4">
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-2">
+                ${item.tags.map(t => `<span class="px-2.5 py-0.5 rounded-lg bg-amber-50 text-amber-700 text-[10px] font-bold border border-amber-200">${t}</span>`).join('')}
+              </div>
+              <h3 class="font-bold text-slate-900 text-base group-hover:text-amber-600 transition-colors">${item.title}</h3>
+              <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">${item.description}</p>
+            </div>
+
+            <div class="pt-3 border-t border-slate-100 flex flex-col sm:flex-row gap-2">
+              <a href="${item.liveUrl}" target="_blank" class="flex-1 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-100 text-slate-800 font-bold text-xs flex items-center justify-center gap-1.5 transition-colors">
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-amber-600"></i>
+                <span>Visit Live Site</span>
+              </a>
+              <a href="${makeWhatsAppLink(`Hello KL Edits, I would like to get a website similar to '${item.title}' (${item.liveUrl}).`)}" target="_blank" class="py-2.5 px-4 rounded-xl bg-slate-900 text-white hover:bg-black font-extrabold text-xs flex items-center justify-center gap-1.5 transition-colors shadow-md">
+                <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                <span>Get Similar</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // Dedicated Web Feedback Grid
+      const feedbackGrid = document.getElementById('webFeedbackGrid');
+      if (feedbackGrid) {
+        feedbackGrid.innerHTML = siteData.webService.feedbacks.map(fb => `
+          <div class="light-card rounded-2xl overflow-hidden group cursor-pointer" onclick="openLightbox('${fb.image}', 'Web Client Review: ${fb.clientName}')">
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
+              <img src="${fb.image}" alt="${fb.clientName}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="px-3 py-1 rounded-full bg-slate-900 text-white text-xs font-bold">
+                  <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Zoom Proof
+                </span>
+              </div>
+            </div>
+            <div class="p-3.5">
+              <div class="flex items-center gap-1 text-amber-500 text-xs mb-1">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <h4 class="text-xs font-bold text-slate-900">${fb.clientName}</h4>
+              <p class="text-[11px] text-slate-500 italic line-clamp-2 mt-1">"${fb.review}"</p>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+
+    /* ============================================================
+       SEAMLESS MULTI-VIEW / TAB SWITCHING LOGIC
+       ============================================================ */
+    const views = ['home', 'cv', 'graphic', 'video', 'web', 'contact'];
+
+    function switchView(viewName, event) {
+      if (event) event.preventDefault();
+
+      if (!views.includes(viewName)) viewName = 'home';
+
+      views.forEach(v => {
+        const viewEl = document.getElementById(`view-${v}`);
+        if (viewEl) {
+          if (v === viewName) {
+            viewEl.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          } else {
+            viewEl.classList.add('hidden');
+          }
+        }
+      });
+
+      // Update Desktop Navbar Buttons styling (Active = Gold Button, Inactive = Clean Muted)
+      const navButtons = document.querySelectorAll('.nav-btn');
+      navButtons.forEach(btn => {
+        const target = btn.getAttribute('data-nav');
+        if (target === viewName) {
+          btn.className = "nav-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all text-brand-navy bg-brand-gold shadow-md shadow-brand-gold/20";
+        } else {
+          btn.className = "nav-btn px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-all";
+        }
+      });
+
+      // Close mobile menu if open
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+      }
+
+      history.pushState(null, null, `#${viewName}`);
+    }
+
+    function scrollToServices() {
+      const section = document.getElementById('servicesPreviewSection');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+
+    /* ============================================================
+       ANIMATED STATISTICS COUNTER
+       ============================================================ */
+    function initStatsCounter() {
+      const statsSection = document.getElementById('statsSection');
+      if (!statsSection) return;
+
+      let animated = false;
+      const counters = document.querySelectorAll('.stat-counter');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !animated) {
+            animated = true;
+            counters.forEach(counter => {
+              const target = +counter.getAttribute('data-target');
+              const duration = 1800;
+              const stepTime = 20;
+              const totalSteps = duration / stepTime;
+              const increment = target / totalSteps;
+              let current = 0;
+
+              const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                  counter.innerText = target;
+                  clearInterval(timer);
+                } else {
+                  counter.innerText = Math.ceil(current);
+                }
+              }, stepTime);
+            });
+          }
+        });
+      }, { threshold: 0.3 });
+
+      observer.observe(statsSection);
+    }
+
+
+    /* ============================================================
+       LIGHTBOX / ZOOM MODAL LOGIC
+       ============================================================ */
+    function openLightbox(imageUrl, caption) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      if (!modal || !img) return;
+
+      img.src = imageUrl;
+      cap.innerText = caption || '';
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    document.getElementById('lightboxModal')?.addEventListener('click', (e) => {
+      if (e.target.id === 'lightboxModal') closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+
+    /* ============================================================
+       QUICK WHATSAPP MESSAGE SENDER FORM
+       ============================================================ */
+    function handleQuickContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('userName').value.trim();
+      const service = document.getElementById('userService').value;
+      const message = document.getElementById('userMessage').value.trim();
+
+      const formattedText = 
+`*New Website Inquiry - KL Edits*
+👤 *Client Name:* ${name}
+💼 *Service Required:* ${service}
+📝 *Message:* ${message || 'No additional notes provided.'}
+
+_Sent via KL Edits Website Form_`;
+
+      const waUrl = makeWhatsAppLink(formattedText);
+      window.open(waUrl, '_blank');
+    }
+
+
+    /* ============================================================
+       PAGE INITIALIZATION
+       ============================================================ */
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) yearEl.innerText = new Date().getFullYear();
+
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+
+      initHeroSlider();
+      renderHomePreviews();
+      renderCvView();
+      renderGraphicView();
+      renderVideoView();
+      renderWebView();
+      initStatsCounter();
+
+      const hash = window.location.hash.replace('#', '');
+      if (views.includes(hash)) {
+        switchView(hash);
+      } else {
+        switchView('home');
+      }
+
+      window.addEventListener('popstate', () => {
+        const currentHash = window.location.hash.replace('#', '');
+        if (views.includes(currentHash)) {
+          switchView(currentHash);
+        } else {
+          switchView('home');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
